@@ -1,0 +1,403 @@
+{% include 'landhead.html' %}
+
+<div class="main sign__container">
+    <div class="modal-sign__container sign__form">
+                    <div class="sign__title">Sign Up</div>
+        
+        <div class="modal-sign__block">
+            <div class="modal-sign__tabs form" dir="auto">
+                <div class="modal-sign__tabs-block">
+                    <a
+                        href="{{url_for ('login')}}"
+                        class="modal-sign__tab "
+                        data-value="1"
+                    >
+                        Login                    </a>
+                    <a
+                        href="{{url_for ('register')}}"
+                        class="modal-sign__tab active"
+                        data-value="2"
+                    >
+                        Registration                    </a>
+                </div>
+            </div>
+
+                        <div id="tab-2" class="tabs__item active">
+                                                                    <form
+    action="{{url_for ('dashboard')}}"
+    method="post"
+        onsubmit="this.elements['time_offset'].value = -new Date().getTimezoneOffset() * 60; return QXvId.submit(this, '__alreadySubmited'); "
+    dir="auto"
+>
+    <input type="hidden" name="_token" value="dfLYZpvOt5l4HvTJiq0fHoKs53tpklaQy7Trk1J8">    <input type="hidden" name="time_offset">
+
+    
+    <div class="modal-sign__input select select-icon">
+        <div class="icon-input">
+            <svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16" fill="none">
+              <g opacity="0.3" clip-path="url(#clip0_7761_804)">
+                <path d="M8.08594 0.34375C3.86406 0.34375 0.429688 3.77812 0.429688 8C0.429688 12.2219 3.86406 15.6562 8.08594 15.6562C12.3078 15.6562 15.7422 12.2219 15.7422 8C15.7422 3.77812 12.3078 0.34375 8.08594 0.34375ZM14.4328 7.3625H11.3422C11.2766 5.3125 10.8828 3.30937 10.1797 1.97187C12.4797 2.775 14.1859 4.85625 14.4328 7.3625ZM8.08594 14.3813C7.31719 14.3813 6.22344 12.1656 6.10156 8.6375H10.0672C9.94844 12.1625 8.85469 14.3813 8.08594 14.3813ZM6.10156 7.3625C6.22031 3.8375 7.31719 1.61875 8.08594 1.61875C8.85469 1.61875 9.94844 3.83438 10.0703 7.3625H6.10156ZM5.99219 1.97187C5.28906 3.30937 4.89531 5.30937 4.82656 7.35938H1.73906C1.98594 4.85625 3.69219 2.775 5.99219 1.97187ZM1.73906 8.6375H4.82969C4.89844 10.6875 5.29219 12.6906 5.99531 14.025C3.69219 13.225 1.98594 11.1437 1.73906 8.6375ZM10.1797 14.0281C10.8828 12.6906 11.2766 10.6906 11.3453 8.64062H14.4359C14.1859 11.1438 12.4797 13.225 10.1797 14.0281Z" fill="white"/>
+              </g>
+              <defs>
+                <clipPath id="clip0_7761_804">
+                  <rect width="16" height="16" fill="white" transform="translate(0.0859375)"/>
+                </clipPath>
+              </defs>
+            </svg>
+        </div>
+
+        <label class="modal-sign__input-label ">Country / Region of residence</label>
+        <select name="country-code" class="select__element">
+            <option value="">Select country</option>
+                            <option value="AF" >Afghanistan</option>
+                            <option value="AL" >Albania</option>
+                            <option value="DZ" >Algeria</option>
+                            <option value="AS" >American Samoa</option>
+                            <option value="AO" >Angola</option>
+                            <option value="AI" >Anguilla</option>
+                            <option value="AQ" >Antarctica</option>
+                            <option value="AG" >Antigua and Barbuda</option>
+                            <option value="AR" >Argentina</option>
+                            <option value="AM" >Armenia</option>
+                            <option value="AW" >Aruba</option>
+                            <option value="AC" >Ascension Island</option>
+                            <option value="AZ" >Azerbaijan</option>
+                            <option value="BS" >Bahamas</option>
+                            <option value="BH" >Bahrain</option>
+                            <option value="BD" >Bangladesh</option>
+                            <option value="BB" >Barbados</option>
+                            <option value="BY" >Belarus</option>
+                            <option value="BZ" >Belize</option>
+                            <option value="BJ" >Benin</option>
+                            <option value="BM" >Bermuda</option>
+                            <option value="BT" >Bhutan</option>
+                            <option value="BO" >Bolivia</option>
+                            <option value="BA" >Bosnia and Herzegovina</option>
+                            <option value="BW" >Botswana</option>
+                            <option value="BV" >Bouvet Island</option>
+                            <option value="BR" >Brazil</option>
+                            <option value="IO" >British Indian Ocean Territory</option>
+                            <option value="BN" >Brunei</option>
+                            <option value="BF" >Burkina Faso</option>
+                            <option value="BI" >Burundi</option>
+                            <option value="KH" >Cambodia</option>
+                            <option value="CM" >Cameroon</option>
+                            <option value="IC" >Canary Islands</option>
+                            <option value="CV" >Cape Verde</option>
+                            <option value="KY" >Cayman Islands</option>
+                            <option value="CF" >Central African Republic</option>
+                            <option value="EA" >Ceuta and Melilla</option>
+                            <option value="TD" >Chad</option>
+                            <option value="CL" >Chile</option>
+                            <option value="CN" >China</option>
+                            <option value="CX" >Christmas Island</option>
+                            <option value="CP" >Clipperton Island</option>
+                            <option value="CC" >Cocos (Keeling) Islands</option>
+                            <option value="CO" >Colombia</option>
+                            <option value="KM" >Comoros</option>
+                            <option value="CG" >Congo - Brazzaville</option>
+                            <option value="CD" >Congo - Kinshasa</option>
+                            <option value="CK" >Cook Islands</option>
+                            <option value="CR" >Costa Rica</option>
+                            <option value="CU" >Cuba</option>
+                            <option value="CW" >Curaçao</option>
+                            <option value="CI" >Côte d’Ivoire</option>
+                            <option value="DG" >Diego Garcia</option>
+                            <option value="DJ" >Djibouti</option>
+                            <option value="DM" >Dominica</option>
+                            <option value="DO" >Dominican Republic</option>
+                            <option value="EC" >Ecuador</option>
+                            <option value="EG" >Egypt</option>
+                            <option value="SV" >El Salvador</option>
+                            <option value="GQ" >Equatorial Guinea</option>
+                            <option value="ER" >Eritrea</option>
+                            <option value="ET" >Ethiopia</option>
+                            <option value="FK" >Falkland Islands</option>
+                            <option value="FO" >Faroe Islands</option>
+                            <option value="FJ" >Fiji</option>
+                            <option value="GF" >French Guiana</option>
+                            <option value="PF" >French Polynesia</option>
+                            <option value="TF" >French Southern Territories</option>
+                            <option value="GA" >Gabon</option>
+                            <option value="GM" >Gambia</option>
+                            <option value="GE" >Georgia</option>
+                            <option value="GH" >Ghana</option>
+                            <option value="GI" >Gibraltar</option>
+                            <option value="GL" >Greenland</option>
+                            <option value="GD" >Grenada</option>
+                            <option value="GP" >Guadeloupe</option>
+                            <option value="GT" >Guatemala</option>
+                            <option value="GG" >Guernsey</option>
+                            <option value="GN" >Guinea</option>
+                            <option value="GW" >Guinea-Bissau</option>
+                            <option value="GY" >Guyana</option>
+                            <option value="HT" >Haiti</option>
+                            <option value="HM" >Heard & McDonald Islands</option>
+                            <option value="HN" >Honduras</option>
+                            <option value="IS" >Iceland</option>
+                            <option value="IN" >India</option>
+                            <option value="ID" >Indonesia</option>
+                            <option value="IR" >Iran</option>
+                            <option value="IQ" >Iraq</option>
+                            <option value="IM" >Isle of Man</option>
+                            <option value="JM" >Jamaica</option>
+                            <option value="JP" >Japan</option>
+                            <option value="JE" >Jersey</option>
+                            <option value="JO" >Jordan</option>
+                            <option value="KZ" >Kazakhstan</option>
+                            <option value="KE" >Kenya</option>
+                            <option value="KI" >Kiribati</option>
+                            <option value="XK" >Kosovo</option>
+                            <option value="KW" >Kuwait</option>
+                            <option value="KG" >Kyrgyzstan</option>
+                            <option value="LA" >Laos</option>
+                            <option value="LB" >Lebanon</option>
+                            <option value="LS" >Lesotho</option>
+                            <option value="LR" >Liberia</option>
+                            <option value="LY" >Libya</option>
+                            <option value="MO" >Macau SAR China</option>
+                            <option value="MK" >Macedonia</option>
+                            <option value="MG" >Madagascar</option>
+                            <option value="MW" >Malawi</option>
+                            <option value="MY" >Malaysia</option>
+                            <option value="MV" >Maldives</option>
+                            <option value="ML" >Mali</option>
+                            <option value="MH" >Marshall Islands</option>
+                            <option value="MQ" >Martinique</option>
+                            <option value="MR" >Mauritania</option>
+                            <option value="MU" >Mauritius</option>
+                            <option value="YT" >Mayotte</option>
+                            <option value="MX" >Mexico</option>
+                            <option value="FM" >Micronesia</option>
+                            <option value="MD" >Moldova</option>
+                            <option value="MC" >Monaco</option>
+                            <option value="MN" >Mongolia</option>
+                            <option value="ME" >Montenegro</option>
+                            <option value="MS" >Montserrat</option>
+                            <option value="MA" >Morocco</option>
+                            <option value="MZ" >Mozambique</option>
+                            <option value="MM" >Myanmar (Burma)</option>
+                            <option value="NA" >Namibia</option>
+                            <option value="NR" >Nauru</option>
+                            <option value="NP" >Nepal</option>
+                            <option value="AN" >Netherlands Antilles</option>
+                            <option value="NC" >New Caledonia</option>
+                            <option value="NI" >Nicaragua</option>
+                            <option value="NE" >Niger</option>
+                            <option value="NG"  selected>Nigeria</option>
+                            <option value="NU" >Niue</option>
+                            <option value="NF" >Norfolk Island</option>
+                            <option value="OM" >Oman</option>
+                            <option value="PK" >Pakistan</option>
+                            <option value="PW" >Palau</option>
+                            <option value="PS" >Palestinian Territories</option>
+                            <option value="PA" >Panama</option>
+                            <option value="PG" >Papua New Guinea</option>
+                            <option value="PY" >Paraguay</option>
+                            <option value="PE" >Peru</option>
+                            <option value="PH" >Philippines</option>
+                            <option value="PN" >Pitcairn Islands</option>
+                            <option value="QA" >Qatar</option>
+                            <option value="RU" >Russia</option>
+                            <option value="RW" >Rwanda</option>
+                            <option value="RE" >Réunion</option>
+                            <option value="BL" >Saint Barthélemy</option>
+                            <option value="SH" >Saint Helena</option>
+                            <option value="KN" >Saint Kitts and Nevis</option>
+                            <option value="LC" >Saint Lucia</option>
+                            <option value="MF" >Saint Martin</option>
+                            <option value="PM" >Saint Pierre and Miquelon</option>
+                            <option value="WS" >Samoa</option>
+                            <option value="SA" >Saudi Arabia</option>
+                            <option value="SN" >Senegal</option>
+                            <option value="RS" >Serbia</option>
+                            <option value="SC" >Seychelles</option>
+                            <option value="SG" >Singapore</option>
+                            <option value="SX" >Sint Maarten</option>
+                            <option value="SB" >Solomon Islands</option>
+                            <option value="SO" >Somalia</option>
+                            <option value="ZA" >South Africa</option>
+                            <option value="GS" >South Georgia & South Sandwich Islands</option>
+                            <option value="KR" >South Korea</option>
+                            <option value="SS" >South Sudan</option>
+                            <option value="LK" >Sri Lanka</option>
+                            <option value="VC" >St. Vincent & Grenadines</option>
+                            <option value="SD" >Sudan</option>
+                            <option value="SR" >Suriname</option>
+                            <option value="SJ" >Svalbard and Jan Mayen</option>
+                            <option value="SZ" >Swaziland</option>
+                            <option value="SY" >Syria</option>
+                            <option value="ST" >São Tomé and Príncipe</option>
+                            <option value="TW" >Taiwan</option>
+                            <option value="TJ" >Tajikistan</option>
+                            <option value="TZ" >Tanzania</option>
+                            <option value="TH" >Thailand</option>
+                            <option value="TL" >Timor-Leste</option>
+                            <option value="TG" >Togo</option>
+                            <option value="TK" >Tokelau</option>
+                            <option value="TO" >Tonga</option>
+                            <option value="TT" >Trinidad and Tobago</option>
+                            <option value="TA" >Tristan da Cunha</option>
+                            <option value="TN" >Tunisia</option>
+                            <option value="TR" >Turkey</option>
+                            <option value="TM" >Turkmenistan</option>
+                            <option value="TC" >Turks and Caicos Islands</option>
+                            <option value="TV" >Tuvalu</option>
+                            <option value="UG" >Uganda</option>
+                            <option value="UA" >Ukraine</option>
+                            <option value="AE" >United Arab Emirates</option>
+                            <option value="UY" >Uruguay</option>
+                            <option value="UZ" >Uzbekistan</option>
+                            <option value="VU" >Vanuatu</option>
+                            <option value="VA" >Vatican City</option>
+                            <option value="VE" >Venezuela</option>
+                            <option value="VN" >Vietnam</option>
+                            <option value="WF" >Wallis and Futuna</option>
+                            <option value="EH" >Western Sahara</option>
+                            <option value="YE" >Yemen</option>
+                            <option value="ZM" >Zambia</option>
+                            <option value="ZW" >Zimbabwe</option>
+                            <option value="AX" >Åland Islands</option>
+                    </select>
+        <div class="modal-sign__input-select form__select select__wrapper "></div>
+            </div>
+
+    <div class="modal-sign__input select">
+        <label class="modal-sign__input-label ">Currency</label>
+        <select name="currency" class="select__element">
+            <option value="">Select currency</option>
+                            <option value="EUR" >EUR</option>
+                            <option value="GBP" >GBP</option>
+                            <option value="USD"  selected>USD</option>
+                            <option value="BRL" >BRL</option>
+                            <option value="IDR" >IDR</option>
+                            <option value="MYR" >MYR</option>
+                            <option value="INR" >INR</option>
+                            <option value="KZT" >KZT</option>
+                            <option value="RUB" >RUB</option>
+                            <option value="THB" >THB</option>
+                            <option value="UAH" >UAH</option>
+                            <option value="VND" >VND</option>
+                            <option value="NGN" >NGN</option>
+                            <option value="EGP" >EGP</option>
+                            <option value="MXN" >MXN</option>
+                            <option value="JPY" >JPY</option>
+                            <option value="BDT" >BDT</option>
+                            <option value="PKR" >PKR</option>
+                    </select>
+        <div class="modal-sign__input-select form__select select__wrapper "></div>
+            </div>
+
+   <div class="modal-sign__input">
+        <label class="modal-sign__input-label ">Email</label>
+        <input type="email" name="email" value="" class="modal-sign__input-value focus-tooltip" required="1" autocomplete="off" placeholder="Email"  />        <div class="modal-sign__input-tooltip">It is not possible to change email in the future. By specifying a non-existent or incorrect email, the withdrawal of funds from the account will be impossible.</div>
+               <div data-role="email-misspell-hint" class="misspell-hint hide hint -danger">
+           Did you mean:           <span data-role="email-misspell-suggestion" class="misspell-hint-suggestion"></span>
+       </div>
+    </div>
+    <div class="modal-sign__input">
+        <label class="modal-sign__input-label ">Password</label>
+        <input type="password" name="password" value="" class="modal-sign__input-value" required="1" autocomplete="off" placeholder="Password"  />            </div>
+
+    <div class="modal-sign__input">
+        <div class="modal-sign__block-checked">
+            <label class="modal-sign__checked-container">
+                <input type="checkbox" name="rules" value="1"  />                <span class="modal-sign__checked-checkmark"></span>
+                <div>
+                    I confirm that I am 18 years old or older </div>
+            </label>
+        </div>
+            </div>
+
+    <div class="modal-sign__input">
+        <div class="modal-sign__block-checked">
+            <label class="modal-sign__checked-container">
+                <input type="checkbox" name="not-us-citizen" value="1"  />                <span class="modal-sign__checked-checkmark"></span>
+                <div>
+                    I declare and confirm that I am not a citizen or resident of the US for tax purposes                </div>
+            </label>
+        </div>
+            </div>
+
+    
+    <button class="modal-sign__block-button ">
+        <div>Registration</div>
+        <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle opacity="0.3" cx="12" cy="12.75" r="12" transform="rotate(-90 12 12.75)" fill="white"/>
+            <path d="M12.5497 7.95321L12.1565 8.34628C12.0329 8.4697 11.9645 8.63467 11.9645 8.81028C11.9645 8.98609 12.0329 9.16599 12.1565 9.2894L14.6827 11.8308H6.65668C6.29473 11.8308 6 12.095 6 12.4568V13.013C6 13.3748 6.29473 13.7058 6.65668 13.7058H14.7113L12.1565 16.2421C12.0329 16.3657 11.9645 16.5212 11.9645 16.697C11.9645 16.8726 12.0329 17.033 12.1565 17.1565L12.5497 17.5475C12.8056 17.8033 13.2219 17.8022 13.4778 17.5464L17.8084 13.2153C17.9317 13.0919 18 12.9265 18 12.7494V12.7475C18 12.5718 17.9317 12.4068 17.8084 12.2835L13.4779 7.95321C13.222 7.69721 12.8056 7.69721 12.5497 7.95321Z" fill="white"/>
+        </svg>
+    </button>
+</form>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+         new EmailMisspellChecker({
+             emailInput: document.querySelector('#tab-2 input[name=email]'),
+             hintNode: document.querySelector('[data-role=email-misspell-hint]')
+         });
+    });
+</script>                    <div class="modal-sign__footer">
+                        <div class="modal-sign__footer-header">
+                            <div class="modal-sign__footer-header-text">Sign in</div>
+                        </div>
+
+
+                    </div>
+                            </div>
+            <div id="tab-1" class="tabs__item ">
+                                    <form action="{{url_for ('dashboard')}}" method="post"
+        onsubmit="return QXvId.submit(this);"
+    dir="auto"
+>
+    <input type="hidden" name="_token" value="dfLYZpvOt5l4HvTJiq0fHoKs53tpklaQy7Trk1J8">
+    
+   <div class="modal-sign__input">
+        <label class="modal-sign__input-label ">Email</label>
+        <input type="email" name="email" value="" class="modal-sign__input-value" required="1" placeholder="Email"  />        <div class="modal-sign__input-tooltip">It is not possible to change email in the future. By specifying a non-existent or incorrect email, the withdrawal of funds from the account will be impossible.</div>
+            </div>
+
+    <div class="modal-sign__input">
+        <label class="modal-sign__input-label ">Password</label>
+        <input type="password" name="password" value="" class="modal-sign__input-value" required="1" autocomplete="off" placeholder="Password"  />            </div>
+
+    <div class="modal-sign__input">
+        <div class="modal-sign__block-checked">
+            <label class="modal-sign__checked-container">
+                <input type="checkbox" name="remember" value="1" checked="checked"  />                <span class="modal-sign__checked-checkmark"></span>
+                Remember me            </label>
+            <a href="" class="modal-sign__block-checked-forgot">
+                Forgot your password?            </a>
+        </div>
+    </div>
+
+
+    
+    <button class="modal-sign__block-button ">
+        <div>Sign in</div>
+        <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle opacity="0.3" cx="12" cy="12.75" r="12" transform="rotate(-90 12 12.75)" fill="white"/>
+            <path d="M12.5497 7.95321L12.1565 8.34628C12.0329 8.4697 11.9645 8.63467 11.9645 8.81028C11.9645 8.98609 12.0329 9.16599 12.1565 9.2894L14.6827 11.8308H6.65668C6.29473 11.8308 6 12.095 6 12.4568V13.013C6 13.3748 6.29473 13.7058 6.65668 13.7058H14.7113L12.1565 16.2421C12.0329 16.3657 11.9645 16.5212 11.9645 16.697C11.9645 16.8726 12.0329 17.033 12.1565 17.1565L12.5497 17.5475C12.8056 17.8033 13.2219 17.8022 13.4778 17.5464L17.8084 13.2153C17.9317 13.0919 18 12.9265 18 12.7494V12.7475C18 12.5718 17.9317 12.4068 17.8084 12.2835L13.4779 7.95321C13.222 7.69721 12.8056 7.69721 12.5497 7.95321Z" fill="white"/>
+        </svg>
+    </button>
+</form>
+                    <div class="modal-sign__footer">
+                        <div class="modal-sign__footer-header">
+                            <div class="modal-sign__footer-header-text">Sign in via</div>
+                        </div>
+
+                        <div class="modal-sign__social">
+                            <a href="https://qxbroker.com/oauth/facebook" class="modal-sign__social-button facebook">
+                                <i class="icon icon__facebook-login"></i>
+                            </a>
+                            <a href="https://qxbroker.com/oauth/google" class="modal-sign__social-button google">
+                                <i class="icon icon__google"></i>
+                            </a>
+                        </div>
+                    </div>
+                            </div>
+            <div class="popup-modal__footer"></div>
+        </div>
+    </div>
+</div>
+<!-- prettier-ignore -->
+{% include 'landfoot.html' %}
